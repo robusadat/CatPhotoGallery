@@ -1,14 +1,14 @@
 //
-//  CollectionView16Tests.swift
-//  CollectionView16Tests
+//  CatPhotoGalleryTests.swift
+//  CatPhotoGalleryTests
 //
 //  Created by Sadat on 1/22/24.
 //
 
 import XCTest
-@testable import CollectionView16
+@testable import CatPhotoGallery
 
-final class CollectionView16Tests: XCTestCase {
+final class CatPhotoGalleryTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

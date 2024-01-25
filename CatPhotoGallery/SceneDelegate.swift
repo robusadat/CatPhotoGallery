@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  CollectionView16
+//  CatPhotoGallery
 //
 //  Created by Sadat on 1/22/24.
 //

@@ -1,13 +1,13 @@
 //
-//  CollectionView16UITestsLaunchTests.swift
-//  CollectionView16UITests
+//  CatPhotoGalleryUITestsLaunchTests.swift
+//  CatPhotoGalleryUITests
 //
 //  Created by Sadat on 1/22/24.
 //
 
 import XCTest
 
-final class CollectionView16UITestsLaunchTests: XCTestCase {
+final class CatPhotoGalleryUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
