@@ -12,7 +12,7 @@ class EntrySceenViewController: UIViewController {
     
     lazy var collectionViewButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Cat Collection", for: .normal)
+        button.setTitle("My Cat", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .systemBlue
         button.addTarget(self, action: #selector(navigateToCatCollection), for: .touchUpInside)
@@ -23,7 +23,7 @@ class EntrySceenViewController: UIViewController {
     
     lazy var randomCatButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Cat Collection", for: .normal)
+        button.setTitle("Random Cat", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .systemBlue
         button.addTarget(self, action: #selector(navigateToRandomCat), for: .touchUpInside)

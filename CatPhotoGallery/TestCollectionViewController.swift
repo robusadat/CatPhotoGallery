@@ -10,7 +10,7 @@ import SwiftUI
 
 class TestCollectionViewController: UIViewController {
     
-    let imageNames = Array(1...6).map {"Image\($0)"}
+    let imageNames = Array(1...8).map {"Image\($0)"}
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -84,14 +84,6 @@ extension TestCollectionViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         let config = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { [weak self] _ in
             
-            let open = UIAction(title: "Open",
-                                image: UIImage(systemName: "link"),
-                                identifier: nil,
-                                discoverabilityTitle: nil,
-                                state: .off) { _ in
-                print("Tapped open")
-            }
-            
             let favorite = UIAction(title: self?.favorites.contains(indexPath.row) == true ? "Remove Favorite" : "Favorite",
                                     image: self?.favorites.contains(indexPath.row) == true ? UIImage(systemName: "star.fill") : UIImage(systemName: "star"),
                                 identifier: nil,
@@ -105,18 +97,11 @@ extension TestCollectionViewController: UICollectionViewDelegate, UICollectionVi
                 print("Tapped favorite")
             }
             
-            let search = UIAction(title: "Search",
-                                image: UIImage(systemName: "magnifyingglass"),
-                                identifier: nil,
-                                discoverabilityTitle: nil,
-                                state: .off) { _ in
-                print("Tapped search")
-            }
             
             return UIMenu(title: "Actions",
                           image: nil,
                           options: UIMenu.Options.displayInline,
-                          children: [open, favorite, search])
+                          children: [favorite])
         }
         
         return config
