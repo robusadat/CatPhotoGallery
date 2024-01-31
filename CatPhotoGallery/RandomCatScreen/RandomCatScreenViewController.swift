@@ -52,8 +52,6 @@ class RandomCatScreenViewController: UIViewController {
             randomCatButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             randomCatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             randomCatButton.heightAnchor.constraint(equalToConstant: 50)
-            
-            
         ])
     }
     

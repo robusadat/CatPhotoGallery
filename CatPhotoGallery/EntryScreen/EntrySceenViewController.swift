@@ -32,6 +32,17 @@ class EntrySceenViewController: UIViewController {
         return button
     }()
     
+    lazy var timerNotificationButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Timer Notification", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemBlue
+        button.addTarget(self, action: #selector(navigateTTimerNotification), for: .touchUpInside)
+        button.layer.cornerRadius = 10
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -40,6 +51,7 @@ class EntrySceenViewController: UIViewController {
     private func setupView() {
         view.addSubview(collectionViewButton)
         view.addSubview(randomCatButton)
+        view.addSubview(timerNotificationButton)
         
         NSLayoutConstraint.activate([
             collectionViewButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -50,7 +62,13 @@ class EntrySceenViewController: UIViewController {
             randomCatButton.topAnchor.constraint(equalTo: collectionViewButton.bottomAnchor, constant: 20),
             randomCatButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             randomCatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            randomCatButton.heightAnchor.constraint(equalToConstant: 50)
+            randomCatButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            timerNotificationButton.topAnchor.constraint(equalTo: randomCatButton.bottomAnchor, constant: 20),
+            timerNotificationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            timerNotificationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            timerNotificationButton.heightAnchor.constraint(equalToConstant: 50),
+            
         ])
     }
     
@@ -61,6 +79,11 @@ class EntrySceenViewController: UIViewController {
     
     @objc func navigateToRandomCat() {
         let viewController = RandomCatScreenViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc func navigateTTimerNotification() {
+        let viewController = TimerNotificationScreenViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
