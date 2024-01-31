@@ -107,16 +107,8 @@
 		2F68DDEE2B5F749D00EE81B6 /* CatPhotoGallery */ = {
 			isa = PBXGroup;
 			children = (
-				2F68DE282B69CC2900EE81B6 /* TimerNotificationScreen */,
-				2F68DE222B62050D00EE81B6 /* RandomCatScreen */,
-				2F68DE1F2B62005A00EE81B6 /* EntryScreen */,
-				2F68DDEF2B5F749D00EE81B6 /* AppDelegate.swift */,
-				2F68DDF12B5F749D00EE81B6 /* SceneDelegate.swift */,
-				2F68DDF32B5F749D00EE81B6 /* TestCollectionViewController.swift */,
-				2F68DDF52B5F749D00EE81B6 /* Main.storyboard */,
-				2F68DDF82B5F749F00EE81B6 /* Assets.xcassets */,
-				2F68DDFA2B5F749F00EE81B6 /* LaunchScreen.storyboard */,
-				2F68DDFD2B5F749F00EE81B6 /* Info.plist */,
+				2F68DE2B2B6A098300EE81B6 /* Common */,
+				2F68DE2C2B6A099900EE81B6 /* Screens */,
 			);
 			path = CatPhotoGallery;
 			sourceTree = "<group>";
@@ -161,6 +153,38 @@
 				2F68DE292B69CC6B00EE81B6 /* TimerNotificationScreenViewController.swift */,
 			);
 			path = TimerNotificationScreen;
+			sourceTree = "<group>";
+		};
+		2F68DE2B2B6A098300EE81B6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2F68DDF82B5F749F00EE81B6 /* Assets.xcassets */,
+				2F68DDEF2B5F749D00EE81B6 /* AppDelegate.swift */,
+				2F68DDFD2B5F749F00EE81B6 /* Info.plist */,
+				2F68DDFA2B5F749F00EE81B6 /* LaunchScreen.storyboard */,
+				2F68DDF52B5F749D00EE81B6 /* Main.storyboard */,
+				2F68DDF12B5F749D00EE81B6 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2F68DE2C2B6A099900EE81B6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2F68DE2D2B6A09C100EE81B6 /* CatGalleryScreen */,
+				2F68DE1F2B62005A00EE81B6 /* EntryScreen */,
+				2F68DE222B62050D00EE81B6 /* RandomCatScreen */,
+				2F68DE282B69CC2900EE81B6 /* TimerNotificationScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2F68DE2D2B6A09C100EE81B6 /* CatGalleryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2F68DDF32B5F749D00EE81B6 /* TestCollectionViewController.swift */,
+			);
+			path = CatGalleryScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
